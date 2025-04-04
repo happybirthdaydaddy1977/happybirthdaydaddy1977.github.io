@@ -137,7 +137,7 @@
         
         <div id="python-code" class="code-block">
             <button class="run-btn" onclick="runPython()">Run Python</button>
-            <span class="comment"># Python Birthday Greetings for the Best Dad</span><br>
+            <span class="comment"># Python Birthday Greetings</span><br>
             <span class="keyword">def</span> <span class="function">happy_birthday_dad</span>():<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"""Special birthday function for an amazing dad"""</span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Happy 48th Birthday Daddy! You're the best!"</span>)<br>
@@ -150,7 +150,7 @@
         
         <div id="java-code" class="code-block" style="display:none;">
             <button class="run-btn" onclick="runJava()">Run Java</button>
-            <span class="comment">// Java Birthday Greetings for the Best Dad</span><br>
+            <span class="comment">// Java Birthday Greetings</span><br>
             <span class="keyword">public class</span> BirthdayWishes {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public static void</span> <span class="function">main</span>(String[] args) {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age = <span class="number">48</span>;<br>
@@ -163,22 +163,23 @@
         
         <div id="cpp-code" class="code-block" style="display:none;">
             <button class="run-btn" onclick="runCpp()">Run C++</button>
-            <span class="comment">// C++ Birthday Greetings for the Best Dad</span><br>
+            <span class="comment">// C++ Birthday Greetings</span><br>
             <span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span><br>
             <span class="keyword">#include</span> <span class="string">&lt;string&gt;</span><br>
             <span class="keyword">using namespace</span> std;<br>
             <br>
             <span class="keyword">class</span> Dad {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span>:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age; {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Dad<span class="string">myDad(int age)</span>{; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this->age = age; <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"🎉 Happy "</span> << age << <span class="string">"th Birthday Dad! 🎉"</span> << endl;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"💾 Another year, another upgrade! Welcome to Version "</span> << age << <span class="string">".0 – may your processing speed be faster and your bugs be minimal!"</span> << endl;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
             };<br>
             <br>
-            <span class="keyword">int</span> <span class="function">main()</span>() {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span>(<span class="keyword">true</span>) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Dad(<span class="string">"myDad(48)"</span>); <br>
+            <span class="keyword">int</span> <span class="function">main()</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Dad<span class="string">myDad(48)</span>; <br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="number">0</span>;<br>
             }
             <div id="cpp-console" class="console"></div>
@@ -186,15 +187,14 @@
         
         <div id="sql-code" class="code-block" style="display:none;">
             <button class="run-btn" onclick="runSQL()">Run SQL</button>
-            <span class="comment">-- SQL Birthday Query for an Exceptional Father</span><br>
+            <span class="comment">-- SQL Birthday Query</span><br>
             <span class="keyword">SELECT</span> <span class="string">'Happy Birthday'</span> <span class="keyword">AS</span> greeting,<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Daddy'</span> <span class="keyword">AS</span> recipient,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'You are the best dad in the world!'</span> <span class="keyword">AS</span> message<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Wishing you many more happy returns of the day'</span> <span class="keyword">AS</span> message<br>
             <span class="keyword">FROM</span> family_members<br>
             <span class="keyword">WHERE</span> relationship = <span class="string">'father'</span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">AND</span> awesomeness &gt; <span class="number">9000</span>;<br>
             <br>
-            <span class="comment">-- Wishing you:</span><br>
             <span class="keyword">INSERT INTO</span> birthday_wishes (wish, priority) <br>
             <span class="keyword">VALUES</span> <br>
             &nbsp;&nbsp;&nbsp;&nbsp;(<span class="string">'Health and happiness'</span>, <span class="number">1</span>),<br>
@@ -202,7 +202,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;(<span class="string">'Quick bug fixes'</span>, <span class="number">3</span>),<br>
             &nbsp;&nbsp;&nbsp;&nbsp;(<span class="string">'Plenty of tea'</span>, <span class="number">4</span>);<br>
             <br>
-            <span class="keyword">COMMIT</span>; <span class="comment">-- These wishes are permanent!</span>
+            <span class="keyword">COMMIT</span>;
             <div id="sql-console" class="console"></div>
         </div>
         
@@ -293,16 +293,8 @@ Wishing you an ultra-secure, data-encrypted, malware-free birthday celebration!`
             consoleElement.style.display = 'block';
             consoleElement.innerHTML = '';
             
-            const cppOutput = `🎉 Happy 1th Birthday Dad! 🎉
-You've compiled 365 days of awesome parenting!
-Wishing you infinite happiness and zero segmentation faults!
-🎉 Happy 2th Birthday Dad! 🎉
-You've compiled 730 days of awesome parenting!
-Wishing you infinite happiness and zero segmentation faults!
-🎉 Happy 3th Birthday Dad! 🎉
-You've compiled 1095 days of awesome parenting!
-Wishing you infinite happiness and zero segmentation faults!
-[Output continues...]`;
+            const cppOutput = `🎉 Happy 48th Birthday Dad! 🎉
+💾 Another year, another upgrade! Welcome to Version 48.0 – may your processing speed be faster and your bugs be minimal!`;
             
             typeWriter(consoleElement, cppOutput, 30);
         }
@@ -313,11 +305,11 @@ Wishing you infinite happiness and zero segmentation faults!
             consoleElement.style.display = 'block';
             consoleElement.innerHTML = '';
             
-            const sqlOutput = `+-----------------+---------+-----------------------------------+
-| greeting        | recipient | message                          |
-+-----------------+---------+-----------------------------------+
-| Happy Birthday  | Daddy    | You are the best dad in the world! |
-+-----------------+---------+-----------------------------------+
+            const sqlOutput = `+-----------------+---------+---------------------------------------------------+
+| greeting        | recipient | message                           |
++-----------------+---------+---------------------------------------------------+
+| Happy Birthday  | Daddy     | Wishing you many more happy returns of the day! |
++-----------------+---------+---------------------------------------------------+
 1 row in set (0.00 sec)
 
 Query OK, 4 rows affected (0.00 sec)
