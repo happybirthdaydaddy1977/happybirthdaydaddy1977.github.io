@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Daddy!</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #3e3e3e;
+            border-radius: 5px;
+            background-color: #252526;
+        }
+        h1 {
+            color: #569cd6;
+            border-bottom: 1px solid #3e3e3e;
+            padding-bottom: 10px;
+        }
+        .code-block {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-left: 3px solid #569cd6;
+            margin: 15px 0;
+            overflow-x: auto;
+            position: relative;
+        }
+        .code-block .run-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Courier New', monospace;
+        }
+        .code-block .run-btn:hover {
+            background-color: #0062a3;
+        }
+        .comment {
+            color: #6a9955;
+        }
+        .keyword {
+            color: #569cd6;
+        }
+        .string {
+            color: #ce9178;
+        }
+        .function {
+            color: #dcdcaa;
+        }
+        .number {
+            color: #b5cea8;
+        }
+        .toggle-btn {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Courier New', monospace;
+        }
+        .toggle-btn:hover {
+            background-color: #0062a3;
+        }
+        .cake {
+            font-size: 30px;
+            text-align: center;
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+        .console {
+            background-color: #1e1e1e;
+            color: #cccccc;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #3e3e3e;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+        .console-title {
+            color: #569cd6;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .typewriter {
+            border-right: 2px solid #777;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #777 }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>// Happy Birthday Daddy!</h1>
+        
+        <div class="cake">
+            🎂<br>
+            | HBD |<br>
+            | DAD |
+        </div>
+        
+        <p class="comment">/* 
+ * A special birthday message for the world's best software engineer dad!
+ * Toggle between languages using the buttons below.
+ * Click "Run" to execute the birthday wishes!
+ */</p>
+        
+        <div>
+            <button class="toggle-btn" onclick="showPython()">Python</button>
+            <button class="toggle-btn" onclick="showJava()">Java</button>
+            <button class="toggle-btn" onclick="showCpp()">C++</button>
+            <button class="toggle-btn" onclick="showSQL()">SQL</button>
+        </div>
+        
+        <div id="python-code" class="code-block">
+            <button class="run-btn" onclick="runPython()">Run Python</button>
+            <span class="keyword">def</span> <span class="function">happy_birthday_dad</span>():<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"""Special birthday function for an amazing dad"""</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> year <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">100</span>):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">f"Happy {year}th Birthday Daddy! You're the best!"</span>)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"May your code always compile and your bugs be minimal!"</span>)<br>
+            <br>
+            <span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">happy_birthday_dad</span>()
+            <div id="python-console" class="console"></div>
+        </div>
+        
+        <div id="java-code" class="code-block" style="display:none;">
+            <button class="run-btn" onclick="runJava()">Run Java</button>
+            <span class="keyword">public class</span> BirthdayWishes {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public static void</span> <span class="function">main</span>(String[] args) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age = <span class="number">1</span>; <span class="comment">// Just the beginning of counting</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span>(<span class="keyword">true</span>) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"Happy "</span> + age + <span class="string">"th Birthday, Dad!"</span>);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"You're the best father a child could ask for!"</span>);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"May your coffee be strong and your stack traces short."</span>);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age++;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span> { Thread.<span class="function">sleep</span>(<span class="number">31536000000L</span>); } <span class="comment">// Wait 1 year</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">catch</span> (InterruptedException e) { <span class="comment">/* Worth waking up for */</span> }<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            }
+            <div id="java-console" class="console"></div>
+        </div>
+        
+        <div id="cpp-code" class="code-block" style="display:none;">
+            <button class="run-btn" onclick="runCpp()">Run C++</button>
+            <span class="comment">// C++ Birthday Greetings for the Best Dad</span><br>
+            <span class="keyword">#include</span> <span class="string">&lt;iostream&gt;</span><br>
+            <span class="keyword">#include</span> <span class="string">&lt;string&gt;</span><br>
+            <span class="keyword">using namespace</span> std;<br>
+            <br>
+            <span class="keyword">class</span> Dad {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span>:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">static void</span> <span class="function">birthdayWishes</span>(<span class="keyword">int</span> age) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"🎉 Happy "</span> << age << <span class="string">"th Birthday Dad! 🎉"</span> << endl;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"You've compiled "</span> << age*<span class="number">365</span> << <span class="string">" days of awesome parenting!"</span> << endl;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"Wishing you infinite happiness and zero segmentation faults!"</span> << endl;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            };<br>
+            <br>
+            <span class="keyword">int</span> <span class="function">main</span>() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age = <span class="number">1</span>; <span class="comment">// Starting the count</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span>(<span class="keyword">true</span>) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dad::<span class="function">birthdayWishes</span>(age++);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system(<span class="string">"sleep 31536000"</span>); <span class="comment">// Wait 1 year</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="number">0</span>;<br>
+            }
+            <div id="cpp-console" class="console"></div>
+        </div>
+        
+        <div id="sql-code" class="code-block" style="display:none;">
+            <button class="run-btn" onclick="runSQL()">Run SQL</button>
+            <span class="comment">-- SQL Birthday Query for an Exceptional Father</span><br>
+            <span class="keyword">SELECT</span> <span class="string">'Happy Birthday'</span> <span class="keyword">AS</span> greeting,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Daddy'</span> <span class="keyword">AS</span> recipient,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'You are the best dad in the world!'</span> <span class="keyword">AS</span> message<br>
+            <span class="keyword">FROM</span> family_members<br>
+            <span class="keyword">WHERE</span> relationship = <span class="string">'father'</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">AND</span> awesomeness &gt; <span class="number">9000</span>;<br>
+            <br>
+            <span class="comment">-- Wishing you:</span><br>
+            <span class="keyword">INSERT INTO</span> birthday_wishes (wish, priority) <br>
+            <span class="keyword">VALUES</span> <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(<span class="string">'Health and happiness'</span>, <span class="number">1</span>),<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(<span class="string">'Successful compilations'</span>, <span class="number">2</span>),<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(<span class="string">'Quick bug fixes'</span>, <span class="number">3</span>),<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(<span class="string">'Plenty of coffee'</span>, <span class="number">4</span>);<br>
+            <br>
+            <span class="keyword">COMMIT</span>; <span class="comment">-- These wishes are permanent!</span>
+            <div id="sql-console" class="console"></div>
+        </div>
+        
+        <div class="code-block">
+            <span class="comment">/* 
+ * From your loving child with all the love in the world.
+ * No matter which language I use, the message is the same:
+ * You're the best dad ever!
+ */</span>
+        </div>
+    </div>
+
+    <script>
+        // Language toggle functions
+        function showPython() {
+            document.getElementById('python-code').style.display = 'block';
+            document.getElementById('java-code').style.display = 'none';
+            document.getElementById('cpp-code').style.display = 'none';
+            document.getElementById('sql-code').style.display = 'none';
+        }
+        
+        function showJava() {
+            document.getElementById('python-code').style.display = 'none';
+            document.getElementById('java-code').style.display = 'block';
+            document.getElementById('cpp-code').style.display = 'none';
+            document.getElementById('sql-code').style.display = 'none';
+        }
+        
+        function showCpp() {
+            document.getElementById('python-code').style.display = 'none';
+            document.getElementById('java-code').style.display = 'none';
+            document.getElementById('cpp-code').style.display = 'block';
+            document.getElementById('sql-code').style.display = 'none';
+        }
+        
+        function showSQL() {
+            document.getElementById('python-code').style.display = 'none';
+            document.getElementById('java-code').style.display = 'none';
+            document.getElementById('cpp-code').style.display = 'none';
+            document.getElementById('sql-code').style.display = 'block';
+        }
+
+        // Run functions with typewriter effect
+        function typeWriter(element, text, speed, callback) {
+            let i = 0;
+            element.innerHTML = '<div class="console-title">Output:</div><span class="typewriter"></span>';
+            const typewriterSpan = element.querySelector('.typewriter');
+            
+            function typing() {
+                if (i < text.length) {
+                    typewriterSpan.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                } else {
+                    typewriterSpan.classList.remove('typewriter');
+                    if (callback) callback();
+                }
+            }
+            
+            typing();
+        }
+
+        // Python run function
+        function runPython() {
+            const consoleElement = document.getElementById('python-console');
+            consoleElement.style.display = 'block';
+            consoleElement.innerHTML = '';
+            
+            const pythonOutput = `Happy 1th Birthday Daddy! You're the best!
+May your code always compile and your bugs be minimal!
+Happy 2th Birthday Daddy! You're the best!
+May your code always compile and your bugs be minimal!
+Happy 3th Birthday Daddy! You're the best!
+May your code always compile and your bugs be minimal!
+[Output truncated... but the wishes continue forever!]`;
+            
+            typeWriter(consoleElement, pythonOutput, 30);
+        }
+
+        // Java run function
+        function runJava() {
+            const consoleElement = document.getElementById('java-console');
+            consoleElement.style.display = 'block';
+            consoleElement.innerHTML = '';
+            
+            const javaOutput = `Happy 1th Birthday, Dad!
+You're the best father a child could ask for!
+May your coffee be strong and your stack traces short.
+Happy 2th Birthday, Dad!
+You're the best father a child could ask for!
+May your coffee be strong and your stack traces short.
+Happy 3th Birthday, Dad!
+You're the best father a child could ask for!
+May your coffee be strong and your stack traces short.
+[Output continues yearly...]`;
+            
+            typeWriter(consoleElement, javaOutput, 30);
+        }
+
+        // C++ run function
+        function runCpp() {
+            const consoleElement = document.getElementById('cpp-console');
+            consoleElement.style.display = 'block';
+            consoleElement.innerHTML = '';
+            
+            const cppOutput = `🎉 Happy 1th Birthday Dad! 🎉
+You've compiled 365 days of awesome parenting!
+Wishing you infinite happiness and zero segmentation faults!
+🎉 Happy 2th Birthday Dad! 🎉
+You've compiled 730 days of awesome parenting!
+Wishing you infinite happiness and zero segmentation faults!
+🎉 Happy 3th Birthday Dad! 🎉
+You've compiled 1095 days of awesome parenting!
+Wishing you infinite happiness and zero segmentation faults!
+[Output continues...]`;
+            
+            typeWriter(consoleElement, cppOutput, 30);
+        }
+
+        // SQL run function
+        function runSQL() {
+            const consoleElement = document.getElementById('sql-console');
+            consoleElement.style.display = 'block';
+            consoleElement.innerHTML = '';
+            
+            const sqlOutput = `+-----------------+---------+-----------------------------------+
+| greeting        | recipient | message                          |
++-----------------+---------+-----------------------------------+
+| Happy Birthday  | Daddy    | You are the best dad in the world! |
++-----------------+---------+-----------------------------------+
+1 row in set (0.00 sec)
+
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.00 sec)`;
+            
+            typeWriter(consoleElement, sqlOutput, 30);
+        }
+    </script>
+</body>
+</html>
