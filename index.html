@@ -171,15 +171,15 @@
             <span class="keyword">class</span> Dad {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span>:<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Dad<span class="string">myDad(int age)</span>{; <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this->age = age; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dad(<span class="keyword">int </span>age) { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this< <span class="string">-></span>age <span class="string">=</span> age; <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"🎉 Happy "</span> << age << <span class="string">"th Birthday Dad! 🎉"</span> << endl;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"💾 Another year, another upgrade! Welcome to Version "</span> << age << <span class="string">".0 – may your processing speed be faster and your bugs be minimal!"</span> << endl;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
             };<br>
             <br>
             <span class="keyword">int</span> <span class="function">main()</span> {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Dad<span class="string">myDad(48)</span>; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Dad myDad(<span class="string">48</span>); <br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="number">0</span>;<br>
             }
             <div id="cpp-console" class="console"></div>
@@ -190,7 +190,7 @@
             <span class="comment">-- SQL Birthday Query</span><br>
             <span class="keyword">SELECT</span> <span class="string">'Happy Birthday'</span> <span class="keyword">AS</span> greeting,<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Daddy'</span> <span class="keyword">AS</span> recipient,<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Wishing you many more happy returns of the day'</span> <span class="keyword">AS</span> message<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Wishing you many more happy returns of the day!'</span> <span class="keyword">AS</span> message<br>
             <span class="keyword">FROM</span> family_members<br>
             <span class="keyword">WHERE</span> relationship = <span class="string">'father'</span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">AND</span> awesomeness &gt; <span class="number">9000</span>;<br>
@@ -305,11 +305,11 @@ Wishing you an ultra-secure, data-encrypted, malware-free birthday celebration!`
             consoleElement.style.display = 'block';
             consoleElement.innerHTML = '';
             
-            const sqlOutput = `+-----------------+---------+---------------------------------------------------+
-| greeting        | recipient | message                           |
-+-----------------+---------+---------------------------------------------------+
-| Happy Birthday  | Daddy     | Wishing you many more happy returns of the day! |
-+-----------------+---------+---------------------------------------------------+
+            const sqlOutput = `+-----------------+-----------+---------------------------------------------------+
+| greeting        | recipient | message                                           |
++-----------------+-----------+---------------------------------------------------+
+| Happy Birthday  | Daddy     | Wishing you many more happy returns of the day!   |
++-----------------+-----------+---------------------------------------------------+
 1 row in set (0.00 sec)
 
 Query OK, 4 rows affected (0.00 sec)
