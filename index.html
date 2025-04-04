@@ -151,17 +151,11 @@
             <button class="run-btn" onclick="runJava()">Run Java</button>
             <span class="keyword">public class</span> BirthdayWishes {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public static void</span> <span class="function">main</span>(String[] args) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age = <span class="number">1</span>; <span class="comment">// Just the beginning of counting</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span>(<span class="keyword">true</span>) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"Happy "</span> + age + <span class="string">"th Birthday, Dad!"</span>);<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"You're the best father a child could ask for!"</span>);<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"May your coffee be strong and your stack traces short."</span>);<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age++;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">try</span> { Thread.<span class="function">sleep</span>(<span class="number">31536000000L</span>); } <span class="comment">// Wait 1 year</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">catch</span> (InterruptedException e) { <span class="comment">/* Worth waking up for */</span> }<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age = <span class="number">48</span>;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"Happy "</span> + age + <span class="string">"th Birthday, Dad!"</span>);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.<span class="function">println</span>(<span class="string">"Wishing you an ultra-secure, data-encrypted, malware-free birthday celebration!"</span>);<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
             &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-            }
             <div id="java-console" class="console"></div>
         </div>
         
@@ -289,16 +283,8 @@ May your code always compile and your bugs be minimal!`;
             consoleElement.style.display = 'block';
             consoleElement.innerHTML = '';
             
-            const javaOutput = `Happy 1th Birthday, Dad!
-You're the best father a child could ask for!
-May your coffee be strong and your stack traces short.
-Happy 2th Birthday, Dad!
-You're the best father a child could ask for!
-May your coffee be strong and your stack traces short.
-Happy 3th Birthday, Dad!
-You're the best father a child could ask for!
-May your coffee be strong and your stack traces short.
-[Output continues yearly...]`;
+            const javaOutput = `Happy 48th Birthday, Dad!
+Wishing you an ultra-secure, data-encrypted, malware-free birthday celebration!`;
             
             typeWriter(consoleElement, javaOutput, 30);
         }
