@@ -137,6 +137,7 @@
         
         <div id="python-code" class="code-block">
             <button class="run-btn" onclick="runPython()">Run Python</button>
+            <span class="comment"># Python Birthday Greetings for the Best Dad</span><br>
             <span class="keyword">def</span> <span class="function">happy_birthday_dad</span>():<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"""Special birthday function for an amazing dad"""</span><br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span>(<span class="string">"Happy 48th Birthday Daddy! You're the best!"</span>)<br>
@@ -149,6 +150,7 @@
         
         <div id="java-code" class="code-block" style="display:none;">
             <button class="run-btn" onclick="runJava()">Run Java</button>
+            <span class="comment">// Java Birthday Greetings for the Best Dad</span><br>
             <span class="keyword">public class</span> BirthdayWishes {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public static void</span> <span class="function">main</span>(String[] args) {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age = <span class="number">48</span>;<br>
@@ -168,19 +170,15 @@
             <br>
             <span class="keyword">class</span> Dad {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span>:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">static void</span> <span class="function">birthdayWishes</span>(<span class="keyword">int</span> age) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age; {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"🎉 Happy "</span> << age << <span class="string">"th Birthday Dad! 🎉"</span> << endl;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"You've compiled "</span> << age*<span class="number">365</span> << <span class="string">" days of awesome parenting!"</span> << endl;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"Wishing you infinite happiness and zero segmentation faults!"</span> << endl;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout << <span class="string">"💾 Another year, another upgrade! Welcome to Version "</span> << age << <span class="string">".0 – may your processing speed be faster and your bugs be minimal!"</span> << endl;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
             };<br>
             <br>
-            <span class="keyword">int</span> <span class="function">main</span>() {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span> age = <span class="number">1</span>; <span class="comment">// Starting the count</span><br>
+            <span class="keyword">int</span> <span class="function">main()</span>() {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span>(<span class="keyword">true</span>) {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dad::<span class="function">birthdayWishes</span>(age++);<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system(<span class="string">"sleep 31536000"</span>); <span class="comment">// Wait 1 year</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Dad(<span class="string">"myDad(48)"</span>); <br>
             &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="number">0</span>;<br>
             }
             <div id="cpp-console" class="console"></div>
